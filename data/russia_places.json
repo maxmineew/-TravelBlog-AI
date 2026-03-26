@@ -1,0 +1,407 @@
+[
+  {
+    "id": "sochi",
+    "name": "Сочи",
+    "region": "Краснодарский край",
+    "facts": [
+      "Протяжённость пляжей более 100 км",
+      "Среднегодовая температура +14 °C",
+      "Единственное место в России с субтропическим климатом",
+      "Более 200 водопадов в окрестностях"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["пляжный отдых", "горные лыжи", "дайвинг", "каньонинг", "SPA"],
+    "prices": "от 5000₽/сутки",
+    "imagePrompt": "Aerial view of Sochi coastline, turquoise Black Sea, palm trees, modern resort buildings nestled between mountains and sea, golden sunset light, vivid colors, photorealistic"
+  },
+  {
+    "id": "spb",
+    "name": "Санкт-Петербург",
+    "region": "Ленинградская область",
+    "facts": [
+      "Более 340 мостов, 42 из них разводных",
+      "Эрмитаж — один из крупнейших музеев мира, более 3 млн экспонатов",
+      "Белые ночи длятся с конца мая до середины июля",
+      "Город основан Петром I в 1703 году"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["музеи", "экскурсии", "речные прогулки", "театры", "гастрономия"],
+    "prices": "от 4000₽/сутки",
+    "imagePrompt": "Saint Petersburg white nights, Neva river with raised drawbridge, illuminated Winter Palace in background, magical purple-pink sky reflecting on water, cinematic composition"
+  },
+  {
+    "id": "kazan",
+    "name": "Казань",
+    "region": "Республика Татарстан",
+    "facts": [
+      "Городу более 1000 лет",
+      "Казанский Кремль — объект ЮНЕСКО",
+      "Мечеть Кул-Шариф — одна из крупнейших в Европе",
+      "Уникальное сочетание русской и татарской культур"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["экскурсии", "гастрономия", "шоппинг", "музеи", "речные прогулки"],
+    "prices": "от 3500₽/сутки",
+    "imagePrompt": "Kazan Kremlin panorama, white walls and towers, Kul Sharif mosque with blue domes, Annunciation Cathedral nearby, clear blue sky, golden hour lighting, architectural photography"
+  },
+  {
+    "id": "baikal",
+    "name": "Озеро Байкал",
+    "region": "Иркутская область / Бурятия",
+    "facts": [
+      "Глубочайшее озеро планеты — 1642 м",
+      "Возраст около 25 млн лет",
+      "Содержит 20% мировых запасов пресной воды",
+      "Зимний лёд Байкала прозрачен на глубину до 40 м"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["треккинг", "дайвинг", "рыбалка", "ледовые прогулки", "фотосафари"],
+    "prices": "от 4500₽/сутки",
+    "imagePrompt": "Crystal clear ice of Lake Baikal in winter, deep blue cracks and bubbles frozen inside, snow-capped mountains in distance, dramatic sky, ultra-sharp detail, nature photography masterpiece"
+  },
+  {
+    "id": "kaliningrad",
+    "name": "Калининград",
+    "region": "Калининградская область",
+    "facts": [
+      "Самый западный областной центр России",
+      "90% мирового запаса янтаря добывается в регионе",
+      "Куршская коса — объект ЮНЕСКО",
+      "Исторический Кёнигсберг с 700-летней историей"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["пляжи Балтики", "музеи", "янтарные мастерские", "гастрономия", "велопрогулки"],
+    "prices": "от 3500₽/сутки",
+    "imagePrompt": "Kaliningrad fishing village at sunset, colorful European-style houses along river, amber-tinted sky, boats moored at wooden docks, cozy atmosphere, warm tones"
+  },
+  {
+    "id": "nizhny",
+    "name": "Нижний Новгород",
+    "region": "Нижегородская область",
+    "facts": [
+      "Стоит на слиянии Оки и Волги",
+      "Кремль XVI века на высоком холме",
+      "Город был закрыт для иностранцев до 1991 года",
+      "Нижегородская ярмарка была крупнейшей в Российской империи"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["экскурсии", "речные круизы", "канатная дорога", "стрит-арт", "гастрономия"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Nizhny Novgorod aerial view, confluence of Oka and Volga rivers, ancient red brick Kremlin on hilltop, cable car crossing river, panoramic cityscape, dramatic clouds"
+  },
+  {
+    "id": "altai",
+    "name": "Горный Алтай",
+    "region": "Республика Алтай",
+    "facts": [
+      "Гора Белуха — высшая точка Сибири, 4506 м",
+      "Пять объектов ЮНЕСКО под общим названием «Золотые горы Алтая»",
+      "Чуйский тракт входит в топ красивейших дорог мира",
+      "Более 7000 озёр в регионе"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["треккинг", "рафтинг", "конные прогулки", "альпинизм", "фотосафари"],
+    "prices": "от 3500₽/сутки",
+    "imagePrompt": "Altai mountains panorama, turquoise Katun river winding through valley, snow-capped peaks, lush green forests, dramatic clouds, epic landscape photography, National Geographic style"
+  },
+  {
+    "id": "kamchatka",
+    "name": "Камчатка",
+    "region": "Камчатский край",
+    "facts": [
+      "Более 300 вулканов, 29 из них действующие",
+      "Долина гейзеров — одно из 7 чудес России",
+      "Крупнейшая популяция бурых медведей",
+      "Горячие термальные источники круглый год"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["вулканы", "термальные источники", "вертолётные экскурсии", "рыбалка", "серфинг"],
+    "prices": "от 8000₽/сутки",
+    "imagePrompt": "Kamchatka volcano erupting at dusk, lava glow reflecting on snow, vast wilderness, steaming geysers in foreground, bears fishing in river, cinematic epic scale, dramatic lighting"
+  },
+  {
+    "id": "crimea",
+    "name": "Крым",
+    "region": "Республика Крым",
+    "facts": [
+      "Более 50 дворцов и усадеб",
+      "Никитский ботанический сад основан в 1812 году",
+      "Ласточкино гнездо — символ полуострова",
+      "Средиземноморский климат южного берега"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["пляжный отдых", "экскурсии", "винодельни", "треккинг", "дайвинг"],
+    "prices": "от 4000₽/сутки",
+    "imagePrompt": "Swallow's Nest castle perched on cliff edge above Black Sea, crystal blue water below, Mediterranean vegetation, dramatic rocky coastline, golden hour, travel poster style"
+  },
+  {
+    "id": "moscow",
+    "name": "Москва",
+    "region": "Московская область",
+    "facts": [
+      "Население превышает 13 млн человек",
+      "Московский метрополитен — один из красивейших в мире",
+      "Более 400 музеев",
+      "Кремль и Красная площадь — объект ЮНЕСКО"
+    ],
+    "season": ["весна", "лето", "осень", "зима"],
+    "activities": ["музеи", "театры", "гастрономия", "шоппинг", "парки", "ночная жизнь"],
+    "prices": "от 5000₽/сутки",
+    "imagePrompt": "Moscow Red Square at night, illuminated Saint Basil's Cathedral with colorful onion domes, GUM department store lights, cobblestone square, light trails, vibrant long exposure photography"
+  },
+  {
+    "id": "yaroslavl",
+    "name": "Ярославль",
+    "region": "Ярославская область",
+    "facts": [
+      "Город основан Ярославом Мудрым около 1010 года",
+      "Исторический центр — объект ЮНЕСКО",
+      "Столица Золотого кольца России",
+      "Родина первого русского театра"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["экскурсии", "речные прогулки", "музеи", "фестивали"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Yaroslavl golden ring city, ancient churches with white walls and green domes along Volga river embankment, autumn golden foliage, peaceful atmosphere, warm sunlight"
+  },
+  {
+    "id": "vladivostok",
+    "name": "Владивосток",
+    "region": "Приморский край",
+    "facts": [
+      "Конечная точка Транссибирской магистрали",
+      "Золотой мост — вантовый мост длиной 1388 м",
+      "Город на 7 холмах у Тихого океана",
+      "Уникальная кухня с азиатским влиянием"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["морские прогулки", "гастрономия", "океанариум", "островные экскурсии", "серфинг"],
+    "prices": "от 4500₽/сутки",
+    "imagePrompt": "Vladivostok Golden Bridge at sunset, Pacific Ocean, hilly cityscape, ships in harbor, dramatic sky with orange and purple tones, modern city meets ocean, aerial perspective"
+  },
+  {
+    "id": "murmansk",
+    "name": "Мурманск",
+    "region": "Мурманская область",
+    "facts": [
+      "Крупнейший город за Полярным кругом",
+      "Северное сияние наблюдается с сентября по март",
+      "Полярная ночь длится 40 дней",
+      "Незамерзающий порт благодаря Гольфстриму"
+    ],
+    "season": ["зима", "осень"],
+    "activities": ["северное сияние", "снегоходы", "оленьи упряжки", "китовое сафари", "рыбалка"],
+    "prices": "от 4000₽/сутки",
+    "imagePrompt": "Northern lights Aurora Borealis over Murmansk, vibrant green and purple curtains in sky, snow-covered landscape, frozen tundra, starry night, long exposure astrophotography"
+  },
+  {
+    "id": "karelia",
+    "name": "Карелия",
+    "region": "Республика Карелия",
+    "facts": [
+      "Более 60 000 озёр",
+      "Кижи — деревянный архитектурный ансамбль ЮНЕСКО",
+      "Мраморный каньон Рускеала — затопленный карьер",
+      "Белые ночи в летние месяцы"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["каякинг", "треккинг", "рыбалка", "снегоходы", "экскурсии"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Ruskeala marble canyon in Karelia, turquoise water in white marble quarry, dense green forest around edges, wooden boats on water, ethereal mist, fairy tale atmosphere"
+  },
+  {
+    "id": "kavminvody",
+    "name": "Кавказские Минеральные Воды",
+    "region": "Ставропольский край",
+    "facts": [
+      "Крупнейший курортный регион России",
+      "Более 130 минеральных источников",
+      "Пятигорск, Кисловодск, Ессентуки, Железноводск",
+      "Лермонтов провёл последние годы жизни в Пятигорске"
+    ],
+    "season": ["лето", "осень", "весна"],
+    "activities": ["лечение", "терренкуры", "экскурсии", "треккинг", "гастрономия"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Kislovodsk National Park, walking trails through lush green valleys, Caucasus mountains backdrop, mineral water pavilion, elegant resort architecture, morning golden light"
+  },
+  {
+    "id": "suzdal",
+    "name": "Суздаль",
+    "region": "Владимирская область",
+    "facts": [
+      "Город-музей, более 200 памятников архитектуры",
+      "Население всего около 10 000 человек",
+      "Запрещено строительство зданий выше 2 этажей в центре",
+      "Праздник огурца проводится ежегодно в июле"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["экскурсии", "музеи", "дегустация медовухи", "конные прогулки", "фестивали"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Suzdal ancient Russian town, white stone churches with golden domes, green meadows, wooden houses, river bend, pastoral countryside, warm summer light, idyllic atmosphere"
+  },
+  {
+    "id": "dombay",
+    "name": "Домбай",
+    "region": "Карачаево-Черкесская Республика",
+    "facts": [
+      "Высота курорта 1600 м над уровнем моря",
+      "Вершина Домбай-Ульген — 4046 м",
+      "Горнолыжный сезон с декабря по апрель",
+      "Реликтовые леса и альпийские луга"
+    ],
+    "season": ["зима", "лето"],
+    "activities": ["горные лыжи", "сноуборд", "треккинг", "альпинизм", "параглайдинг"],
+    "prices": "от 3500₽/сутки",
+    "imagePrompt": "Dombay ski resort, snow-covered Caucasus peaks, ski slopes with fresh powder, pine forests below, cable car ascending mountain, crisp winter air, alpine sports photography"
+  },
+  {
+    "id": "arkhyz",
+    "name": "Архыз",
+    "region": "Карачаево-Черкесская Республика",
+    "facts": [
+      "Одна из крупнейших обсерваторий Евразии",
+      "Более 75 озёр в окрестностях",
+      "Чистейший горный воздух, 300 солнечных дней в году",
+      "Молодой горнолыжный курорт с современной инфраструктурой"
+    ],
+    "season": ["зима", "лето"],
+    "activities": ["горные лыжи", "треккинг", "озёра", "верховая езда", "звёздные наблюдения"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Arkhyz mountain resort, crystal clear alpine lake reflecting snow peaks, star-filled night sky, Milky Way visible, observatory dome in background, epic astrophotography landscape"
+  },
+  {
+    "id": "veliky_novgorod",
+    "name": "Великий Новгород",
+    "region": "Новгородская область",
+    "facts": [
+      "Один из древнейших городов России, основан в 859 году",
+      "Новгородский кремль (Детинец) — старейший в России",
+      "Берестяные грамоты XI века — уникальные археологические находки",
+      "Памятник «Тысячелетие России» установлен в 1862 году"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["экскурсии", "музеи", "речные прогулки", "археология"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Veliky Novgorod ancient Kremlin, red brick fortress walls along Volkhov river, Millennium of Russia monument, Saint Sophia Cathedral, autumn colors, historical atmosphere"
+  },
+  {
+    "id": "vyborg",
+    "name": "Выборг",
+    "region": "Ленинградская область",
+    "facts": [
+      "Средневековый замок XIII века на острове",
+      "Единственный в России город с европейской средневековой архитектурой",
+      "Парк Монрепо — пейзажный парк XVIII века",
+      "Город принадлежал Швеции, Финляндии и России"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["замок", "парк Монрепо", "экскурсии", "гастрономия", "фотопрогулки"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Vyborg medieval castle on island, Scandinavian architecture, cobblestone streets, tower reflecting in calm water, misty morning, European old town atmosphere, travel photography"
+  },
+  {
+    "id": "sheregesh",
+    "name": "Шерегеш",
+    "region": "Кемеровская область",
+    "facts": [
+      "Один из лучших горнолыжных курортов Сибири",
+      "Снежный покров до 4 метров",
+      "Сезон катания с ноября по май",
+      "Уникальный «сибирский паудер» — лёгкий пушистый снег"
+    ],
+    "season": ["зима"],
+    "activities": ["горные лыжи", "сноуборд", "фрирайд", "снегоходы", "ски-туринг"],
+    "prices": "от 3000₽/сутки",
+    "imagePrompt": "Sheregesh ski resort, deep powder snow, snowboarder carving through fresh tracks, snow-covered Siberian fir trees, blue sky, dynamic action sports photography, frost crystals in air"
+  },
+  {
+    "id": "dagestan",
+    "name": "Дагестан",
+    "region": "Республика Дагестан",
+    "facts": [
+      "Самый многонациональный регион России — более 30 народностей",
+      "Сулакский каньон глубже Гранд-Каньона",
+      "Древний Дербент — один из старейших городов мира",
+      "Уникальная горная и морская кухня"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["каньоны", "экскурсии", "гастрономия", "пляжи Каспия", "горные аулы"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Sulak Canyon Dagestan, deep turquoise river winding through massive rocky gorge, dramatic depth perspective, ancient mountain village perched on cliff edge, golden sunlight"
+  },
+  {
+    "id": "plyos",
+    "name": "Плёс",
+    "region": "Ивановская область",
+    "facts": [
+      "Город-вдохновение Исаака Левитана",
+      "Население около 1800 человек",
+      "Один из самых живописных малых городов Поволжья",
+      "Ежегодный кинофестиваль имени Тарковского"
+    ],
+    "season": ["лето", "осень"],
+    "activities": ["пленэры", "прогулки", "музеи", "гастрономия", "речные круизы"],
+    "prices": "от 4000₽/сутки",
+    "imagePrompt": "Plyos small Russian town on Volga river, Levitan-inspired landscape, church on green hilltop, wooden houses, peaceful river reflection, impressionist painting atmosphere, golden autumn"
+  },
+  {
+    "id": "kirzhach",
+    "name": "Киржач",
+    "region": "Владимирская область",
+    "facts": [
+      "Город основан в XIV веке Сергием Радонежским",
+      "Место гибели Юрия Гагарина и Владимира Серёгина в 1968 году",
+      "Типография Аверина — одна из старейших частных типографий России",
+      "Живописные берега реки Киржач с песчаными обрывами"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["экскурсии", "мемориал Гагарина", "прогулки у реки", "храмы", "парашютный спорт"],
+    "prices": "от 2000₽/сутки",
+    "imagePrompt": "Kirzhach small Russian town, ancient monastery on riverbank, sandy cliffs along calm river, birch trees, quiet provincial atmosphere, soft morning light, pastoral landscape"
+  },
+  {
+    "id": "vladimir",
+    "name": "Владимир",
+    "region": "Владимирская область",
+    "facts": [
+      "Древняя столица Северо-Восточной Руси",
+      "Успенский собор XII века — образец для московского Кремля",
+      "Золотые ворота — единственные сохранившиеся в России",
+      "Три объекта ЮНЕСКО: Успенский собор, Дмитриевский собор, церковь Покрова на Нерли"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["экскурсии", "музеи", "смотровые площадки", "Золотое кольцо", "гастрономия"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Vladimir ancient Russian city, white stone Assumption Cathedral with golden domes, panoramic view from hill over Klyazma river valley, dramatic sky, UNESCO heritage atmosphere, historical grandeur"
+  },
+  {
+    "id": "linda",
+    "name": "Линда",
+    "region": "Нижегородская область",
+    "facts": [
+      "Село на берегу реки Линда, притока Волги",
+      "Окружено сосновыми и смешанными лесами",
+      "Популярное место для рыбалки и тихого загородного отдыха",
+      "Близость к Нижнему Новгороду — около 30 км"
+    ],
+    "season": ["лето", "зима"],
+    "activities": ["рыбалка", "грибы и ягоды", "купание", "лыжные прогулки", "отдых на природе"],
+    "prices": "от 1500₽/сутки",
+    "imagePrompt": "Linda village Nizhny Novgorod region, peaceful river bend through pine forest, wooden houses on riverbank, morning mist over water, wild nature, Russian countryside tranquility, summer green"
+  },
+  {
+    "id": "barnaul",
+    "name": "Барнаул",
+    "region": "Алтайский край",
+    "facts": [
+      "Столица Алтайского края, основан в 1730 году",
+      "Ворота к Горному Алтаю — отправная точка для путешествий",
+      "Крупнейший в Сибири ленточный бор проходит через город",
+      "Исторический центр с купеческой архитектурой XIX века"
+    ],
+    "season": ["лето", "осень", "зима"],
+    "activities": ["музеи", "прогулки по набережной Оби", "гастрономия", "ленточный бор", "экскурсии"],
+    "prices": "от 2500₽/сутки",
+    "imagePrompt": "Barnaul city Altai region, Ob river embankment at sunset, mix of historical merchant architecture and modern buildings, vast Siberian pine forest belt, warm golden light, gateway to Altai mountains"
+  }
+]
