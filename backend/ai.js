@@ -127,7 +127,7 @@ class GigaChatProvider {
     }
   }
 
-  async generate(prompt, retried = false) {
+  async generate(prompt, attempt = 0) {
     await this.ensureToken();
 
     const res = await fetch(this.apiUrl, {
@@ -150,9 +150,16 @@ class GigaChatProvider {
       }),
     });
 
-    if (res.status === 401 && !retried) {
+    if (res.status === 401 && attempt < 1) {
       this.token = null;
-      return this.generate(prompt, true);
+      return this.generate(prompt, attempt + 1);
+    }
+
+    if (res.status === 429 && attempt < 3) {
+      const delay = (attempt + 1) * 3000;
+      console.log(`[AI] GigaChat 429 rate-limit, retry in ${delay / 1000}s (attempt ${attempt + 1}/3)`);
+      await new Promise((r) => setTimeout(r, delay));
+      return this.generate(prompt, attempt + 1);
     }
 
     if (!res.ok) {
@@ -338,7 +345,7 @@ class GigaChatImageProvider {
       'https://gigachat.devices.sberbank.ru/api/v1/files';
   }
 
-  async generateImage(prompt) {
+  async generateImage(prompt, attempt = 0) {
     await this.gc.ensureToken();
 
     const res = await fetch(this.gc.apiUrl, {
@@ -356,6 +363,13 @@ class GigaChatImageProvider {
         function_call: 'auto',
       }),
     });
+
+    if (res.status === 429 && attempt < 3) {
+      const delay = (attempt + 1) * 3000;
+      console.log(`[AI] GigaChat image 429 rate-limit, retry in ${delay / 1000}s (attempt ${attempt + 1}/3)`);
+      await new Promise((r) => setTimeout(r, delay));
+      return this.generateImage(prompt, attempt + 1);
+    }
 
     if (!res.ok) {
       const text = await res.text().catch(() => '');
