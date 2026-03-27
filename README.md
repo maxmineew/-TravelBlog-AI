@@ -212,7 +212,7 @@ sudo apt install -y nodejs
 
 # Загрузка проекта
 cd /opt
-git clone <your-repo-url> travelblog-ai
+git clone <your-repo-url>  
 cd travelblog-ai/backend
 npm install --production
 
@@ -222,7 +222,7 @@ nano .env   # заполнить реальные значения
 
 # PM2
 sudo npm install -g pm2
-pm2 start server.js --name travelblog-ai
+pm2 start server.js --name  
 pm2 startup
 pm2 save
 ```
@@ -258,7 +258,7 @@ sudo systemctl restart nginx
 ### SSL (Let's Encrypt)
 
 ```bash
-sudo apt install -y certbot python3-certbot-nginx
+
 sudo certbot --nginx -d your-domain.com
 ```
 
