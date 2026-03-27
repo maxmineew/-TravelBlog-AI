@@ -68,24 +68,29 @@ ${langNote}`;
 // ---------------------------------------------------------------------------
 
 class GigaChatProvider {
-  constructor(clientId, clientSecret) {
+  constructor(clientId, clientSecret, authKey) {
     this.clientId = clientId;
     this.clientSecret = clientSecret;
+    this.authKey = authKey;
     this.token = null;
     this.tokenExpiresAt = 0;
     this.authUrl = 'https://ngw.devices.sberbank.ru:9443/api/v2/oauth';
     this.apiUrl =
       'https://gigachat.devices.sberbank.ru/api/v1/chat/completions';
+    this.scope = process.env.GIGACHAT_SCOPE || 'GIGACHAT_API_PERS';
     this._refreshPromise = null;
+  }
+
+  _getCredentials() {
+    if (this.authKey) return this.authKey;
+    return Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64');
   }
 
   async refreshToken() {
     if (this._refreshPromise) return this._refreshPromise;
 
     this._refreshPromise = (async () => {
-      const credentials = Buffer.from(
-        `${this.clientId}:${this.clientSecret}`,
-      ).toString('base64');
+      const credentials = this._getCredentials();
 
       const res = await fetch(this.authUrl, {
         method: 'POST',
@@ -95,7 +100,7 @@ class GigaChatProvider {
           Authorization: `Basic ${credentials}`,
           RqUID: crypto.randomUUID(),
         },
-        body: 'scope=GIGACHAT_API_PERS',
+        body: `scope=${this.scope}`,
       });
 
       if (!res.ok) {
@@ -106,6 +111,7 @@ class GigaChatProvider {
       const data = await res.json();
       this.token = data.access_token;
       this.tokenExpiresAt = Date.now() + 28 * 60 * 1000;
+      console.log('[AI] GigaChat token refreshed, expires in 28m');
     })();
 
     try {
@@ -326,8 +332,8 @@ class YandexArtProvider {
 // ---------------------------------------------------------------------------
 
 class GigaChatImageProvider {
-  constructor(clientId, clientSecret) {
-    this.gc = new GigaChatProvider(clientId, clientSecret);
+  constructor(clientId, clientSecret, authKey) {
+    this.gc = new GigaChatProvider(clientId, clientSecret, authKey);
     this.filesUrl =
       'https://gigachat.devices.sberbank.ru/api/v1/files';
   }
@@ -403,11 +409,12 @@ function createImageProvider() {
 
   // GigaChat images (fallback — uses existing GigaChat credentials)
   if (provider === 'gigachat' || provider === 'auto') {
+    const authKey = process.env.GIGACHAT_AUTH_KEY;
     const id = process.env.GIGACHAT_CLIENT_ID;
     const secret = process.env.GIGACHAT_CLIENT_SECRET;
-    if (id && secret && id !== 'your_client_id') {
+    if (authKey || (id && secret && id !== 'your_client_id')) {
       console.log('[AI] GigaChat image provider ready');
-      return new GigaChatImageProvider(id, secret);
+      return new GigaChatImageProvider(id, secret, authKey);
     }
   }
 
@@ -423,14 +430,15 @@ function createProvider() {
   const name = (process.env.AI_PROVIDER || 'mock').toLowerCase();
 
   if (name === 'gigachat') {
+    const authKey = process.env.GIGACHAT_AUTH_KEY;
     const id = process.env.GIGACHAT_CLIENT_ID;
     const secret = process.env.GIGACHAT_CLIENT_SECRET;
-    if (!id || !secret) {
+    if (!authKey && (!id || !secret)) {
       console.warn('[AI] GigaChat credentials missing → fallback to mock');
       return new MockProvider();
     }
     console.log('[AI] Using GigaChat provider');
-    return new GigaChatProvider(id, secret);
+    return new GigaChatProvider(id, secret, authKey);
   }
 
   if (name === 'yandexgpt') {
