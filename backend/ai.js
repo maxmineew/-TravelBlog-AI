@@ -145,7 +145,7 @@ class GigaChatProvider {
           },
           { role: 'user', content: prompt },
         ],
-        temperature: 0.87,
+        temperature: 0.3,
         max_tokens: 2048,
       }),
     });
